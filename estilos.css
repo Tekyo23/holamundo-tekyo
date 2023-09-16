@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(8, 50, 92);
+    color: #fff;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    box-shadow: 0px 2px 9px 0px rgba(0,0,0,.51);
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.nav {
+    position: inherit;
+    font-size: 16px;
+    padding: 5px;
+    background: rgb(6, 30, 54);
+}
+
+
+#nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 5px;
+    list-style: none
+}
+
+.nav__list__logo {
+    margin: 0 auto 0 5px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav__list__element  {
+    display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.nav__list__element__btn {
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px 15px;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    color: #fff;
+}
+
+.nav__list__element__btn:hover {
+    color: #ccc;
+}
+
+.register__btn, 
+.account__btn {
+    position: relative;
+    overflow: hidden
+}
+
+.register__btn::before, 
+.account__btn::before {
+    content: '';
+    background: #009afa;
+    width: 0%;
+    height: .2rem;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    transition: width .5s;
+} 
+
+.register__btn:hover::before,
+.account__btn:hover::before {
+    content: '';
+    width: 100%;
+
+}
+
+.about-us {
+    position: relative;
+    background: #eee;
+    color: #000;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.about-us::before {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background: radial-gradient(circle, #009afa, #fff);
+    border-radius: 50%;
+    left: 4rem;
+    top: 55px;
+    transition: .5s ease-in-out;
+}
+
+.about-us:hover::before  {
+    scale: 10;
+}
+
+.about-us__btn {
+    z-index: 1;
+}
+
+.about-us__btn {
+    color: #000;
+    transition: .0s ease-in-out .28s;
+}
+
+.about-us:hover > .about-us__btn {
+    color: #fff;
+    transition: 0s ease-in-out .17s;
+}
+
+#web-content {
+    margin: 0px 10px;
+    margin-bottom: auto;
+}
+
+#introduction {
+    font-size: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#introduction-title {
+    font-size: 3.5em;
+    font-weight: 500;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+#introduction-text {
+    font-size: 1.7em;
+
+}
+
+#videos-list {
+    color: #d4610f;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 1000px;
+}
+
+#videos-list:hover {
+    color: #e41;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    background: rgb(6, 30, 54);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__title {
+    display: inline-block;
+    margin: 0;
+}
+
+.footer__text {
+    font-weight: 1000;
+    margin: 20px auto 10px auto;
+}
+
+.footer__media {
+    position: relative;
+    bottom: 0;
+}
+
+.footer__media__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__media__link:hover {
+    color: #ccc;
+}
+
+.fa-brands {
+    transition: transform .3s;
+    font-size: 40px;
+    margin: 0px 10px;
+}
+
+.footer__media__link:hover > .fa-brands {
+    position: relative;
+    transform: translateY(-10px);
+}
+
+@media (max-width: 551px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        position: sticky;
+        background: rgb(8, 50, 92);
+        padding: 5px;
+        justify-content: flex-start;
+    }
+
+    .nav-mobile__btn {
+        background: transparent;
+        border: 0px;
+    }
+
+    .nav-mobile__list {
+        display: flex;
+        list-style: none;
+        margin: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-mobile__btn {
+        color: #fff;
+        text-decoration: none; 
+        font-size: 20px;  
+        margin-left: auto;
+    }
+
+    .nav-mobile__btn:hover {
+        color: #ccc;
+    }    
+
+}
