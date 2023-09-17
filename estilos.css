@@ -65,10 +65,6 @@ header {
     color: #fff;
 }
 
-.nav__list__element__btn:hover {
-    color: #ccc;
-}
-
 .register__btn, 
 .account__btn {
     position: relative;
@@ -79,19 +75,21 @@ header {
 .account__btn::before {
     content: '';
     background: #009afa;
-    width: 0%;
+    width: 0;
     height: .2rem;
     position: absolute;
-    left: 0;
-    top: 2rem;
-    transition: width .5s;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    top: 2.3rem;
+    transition: width .3s;
+
 } 
 
 .register__btn:hover::before,
 .account__btn:hover::before {
     content: '';
-    width: 100%;
-
+    width: 85%;
 }
 
 .about-us {
@@ -105,17 +103,19 @@ header {
 .about-us::before {
     content: '';
     position: absolute;
-    height: 2rem;
-    width: 2rem;
-    background: radial-gradient(circle, #009afa, #fff);
+    height: 0rem;
+    width: 0rem;
+    background: radial-gradient(circle, #009afa, #045ac2);
     border-radius: 50%;
-    left: 4rem;
-    top: 55px;
-    transition: .5s ease-in-out;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: width, height, .3s ease-in-out;
 }
 
-.about-us:hover::before  {
-    scale: 10;
+.about-us:hover::before {
+    width: 10rem;
+    height: 10rem;
 }
 
 .about-us__btn {
@@ -124,12 +124,12 @@ header {
 
 .about-us__btn {
     color: #000;
-    transition: .0s ease-in-out .28s;
+    transition: .4s ease-in-out;
 }
 
 .about-us:hover > .about-us__btn {
     color: #fff;
-    transition: 0s ease-in-out .17s;
+    transition:  .3s ease-in-out;
 }
 
 #web-content {
