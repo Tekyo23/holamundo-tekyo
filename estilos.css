@@ -1,14 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Variables */
+.text-xs {
+    font-size: 1rem;
+}
+.text-s {
+    font-size: 1.25rem;
+}
+
+.text-m {
+    font-size: 1.5rem;
+}
+
+.text-l {
+    font-size: 1.75rem;
+}
+
+.text-xl {
+    font-size: 2rem;
+}
+
+.text-xxl {
+    font-size: 2.25rem;
+}
+
+.text-3xl {
+    font-size: 2.5rem;
+}
+
+.text-4xl {
+    font-size: 3rem;
+}
+
+.weight-100 {
+    font-weight: 100;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
 
 * {
-    font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     background: rgb(8, 50, 92);
@@ -22,11 +67,13 @@ header {
     box-shadow: 0px 2px 9px 0px rgba(0,0,0,.51);
 }
 
-.nav-mobile {
-    display: none;
+a {
+    text-decoration: none;
 }
 
+/* Header start */
 .nav {
+    font-family: 'Nunito', sans-serif;
     position: inherit;
     font-size: 16px;
     padding: 5px;
@@ -57,7 +104,6 @@ header {
 }
 
 .nav__list__element__btn {
-    text-decoration: none;
     margin: 5px;
     padding: 10px 15px;
     font-weight: 600;
@@ -68,7 +114,6 @@ header {
 .register__btn, 
 .account__btn {
     position: relative;
-    overflow: hidden
 }
 
 .register__btn::before, 
@@ -131,45 +176,145 @@ header {
     color: #fff;
     transition:  .3s ease-in-out;
 }
+/* Header end */
 
+/* Mobile header start */
+.nav-mobile {
+    display: none;
+}
+/* Mobile header end */
+
+/* Home page start */
 #web-content {
-    margin: 0px 10px;
-    margin-bottom: auto;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem;
 }
 
-#introduction {
-    font-size: 10px;
+.hero {
+    font-family: 'Montserrat', 'Hanken Grotesk', sans-serif;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.hero-column {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.hero__title, 
+.hero__subtitle, 
+.hero__slogan {
+    margin: 0 0 .5rem 0;
+    text-transform: uppercase;
+    letter-spacing: -.1rem;
+    line-height: 75%;
+    display: inline;
+}
+
+.hero__slogan {
+    align-self: end;
+    margin-top: .5rem;
+    letter-spacing: -.05rem;
+}
+
+.hero__contacts {
+    position: relative;
+    height: min-content;
+    display: flex;
+    align-items: center;
+}
+
+.hero__contact-me {
+    position: relative;
+    width: fit-content; 
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(-45deg, #55beff, #009afa);
+    color: #fff;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.hero__github,
+.hero__linkedin {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    width: fit-content;    
+}
+
+.hero__github:hover,
+.hero__linkedin:hover {
+    color: #ccc;
+}
+
+.hero__logo__border {
+    display: flex;
+    position: relative;
+    background: #0005;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.hero__logo__border::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, #009afa, #1351d9);
+    inset: 0;
+    inset: -1rem 9rem;
+    z-index: -1;
+    animation: logo-border-rotation 7s linear infinite;
+}
+
+.hero__logo__border::after {
+    content: '';
+    position: absolute;
+    background: rgb(8, 50, 92);
+    border-radius: 100%;
+    width: 95%;
+    height: 95%;
     z-index: 1;
 }
 
-#introduction-title {
-    font-size: 3.5em;
-    font-weight: 500;
-    display: inline-block;
-    margin: 10px 5px;
+@keyframes logo-border-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-#introduction-text {
-    font-size: 1.7em;
-
+.hero__logo{ 
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    z-index: 10;
 }
 
-#videos-list {
-    color: #d4610f;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 1000px;
-}
 
-#videos-list:hover {
-    color: #e41;
-}
+/* Home page end */
 
+/* Footer start */
 #footer {
-    display: flex;
-    flex-direction: column;
-    flex: 0;
+    font-family: 'Nunito', sans-serif;
+    position: sticky;
+    top: 100%;
     background: rgb(6, 30, 54);
     color: #fff;
     padding: 20px;
@@ -204,13 +349,15 @@ header {
     transition: transform .3s;
     font-size: 40px;
     margin: 0px 10px;
+    position: relative;
 }
 
 .footer__media__link:hover > .fa-brands {
-    position: relative;
     transform: translateY(-10px);
 }
+/* Footer end */
 
+/* Responsive design */
 @media (max-width: 551px) {
     .nav {
         display: none;
@@ -219,7 +366,7 @@ header {
     .nav-mobile {
         display: flex;
         position: sticky;
-        background: rgb(8, 50, 92);
+        background: rgb(6, 30, 54);
         padding: 5px;
         justify-content: flex-start;
     }
