@@ -70,7 +70,6 @@ header {
 a {
     text-decoration: none;
 }
-
 /* Header start */
 .nav {
     font-family: 'Nunito', sans-serif;
@@ -187,11 +186,13 @@ a {
 #web-content {
     position: relative;
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .hero {
@@ -200,7 +201,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-grow: 1;
+    height: calc(100vh - 4.5rem);
+}
+
+.about {
+    border: 5px solid red;
 }
 
 .hero-column {
@@ -254,6 +259,7 @@ a {
 .hero__subtitle {
     background: linear-gradient(45deg, #55beff, #009afa);
 	-webkit-background-clip: text;
+    background-clip: text;
 	color: transparent;
 }
 
@@ -275,7 +281,7 @@ a {
 }
 
 .hero__btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);  
 }
 
 .hero__contact-me {
@@ -292,6 +298,7 @@ a {
 
 .hero__contact-me:hover {
     -webkit-filter: brightness(88%);
+    filter: brightness(88%);
 }
 
 .hero__github,
