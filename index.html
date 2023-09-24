@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Web de pruebas</title>
         <meta charset="UTF-8">
@@ -18,7 +18,7 @@
                 <nav class="nav">
                     <ul id="nav__list">
                         <li class="nav__list__logo logo">
-                            <a href="index.html" class="svg">
+                            <a href="index.html" class="svg" aria-label="Ir a la página principal">
                                 <img src="images/Sin título-1.png" alt="" class="logo">
                             </a>
                         </li>
@@ -29,61 +29,80 @@
                             <a href="register-login/register-login.html" class="nav__list__element__btn register__btn">Regístrate</a>
                         </li>
                             <li class="nav__list__element about-me">
-                                <a href="nav/sobrenosotros.html" class="nav__list__element__btn about-me__btn"><span>Sobre mí</span></a>
+                                <a href="#about-section" class="nav__list__element__btn about-me__btn"><span>Sobre mí</span></a>
                         </li>
                     </ul>
                 </nav>
                 <!-- Start of mobile header -->
                 <nav class="nav-mobile">
                     <ul class="nav-mobile__list">
-                        <li class="logo nav-mobile__list__element">
+                        <li class="logo nav-mobile__list__element" aria-label="Ir a la página principal">
                             <a href="index.html" class="svg">
                                 <img src="images/Sin título-1.png" alt="" class="logo">
                             </a>
                         </li>
-                        <button class="nav-mobile__btn nav-mobile__list__element">
+                        <button class="nav-mobile__btn nav-mobile__list__element" aria-label="Abir menú de navegación">
                             <i class="fa-solid fa-bars"></i>
                         </button>
                     </ul>
                 <!-- End of mobile header -->
         </header>
         <main id="web-content">
-            <section class="hero">
-                <div class="hero-column hero-column-left">
-                    <h2 class="hero__subtitle text-3xl weight-600">Sergio Pedro</h2>
-                    <h1 class="hero__title text-4xl weight-600">Desarrollador Front-end</h1>
-                    <p class="hero__slogan text-m weight-100">&ltMás que sueños/&gt</p>
-                    <div class="hero__contacts">
-                        <a href="#" class="hero__contact-me hero__btn text-s weight-600">Contáctame</a>
-                        <a href="https://github.com/Tekyo23" class="hero__github hero__btn github" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/sergio-pedro-616123267" class="hero__linkedin hero__btn linkedin" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
+            <div class="hero-section">
+                <section class="hero">
+                    <div class="hero-column hero-column-left">
+                        <h2 class="hero__subtitle text-3xl weight-600">Sergio Pedro</h2>
+                        <h1 class="hero__title text-4xl weight-600">Desarrollador Front-end</h1>
+                        <p class="hero__slogan text-m weight-100">&ltMás que sueños/&gt</p>
+                        <div class="hero__contacts">
+                            <a href="#" class="hero__contact-me hero__btn text-s weight-600">Contáctame</a>
+                            <a href="https://github.com/Tekyo23" class="hero__github hero__btn github" target="_blank" aria-label="Github">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sergio-pedro-616123267" class="hero__linkedin hero__btn linkedin" target="_blank" aria-label="Linkedin">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-column hero-column-right">
-                    <div class="hero__logo__border">
-                        <img src="images/hero-logo.jpg" class="hero__logo">
+                    <div class="hero-column hero-column-right">
+                        <div class="hero__logo__border">
+                            <img src="images/hero-logo.jpg" class="hero__logo" alt="Imágen personal">
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            <div class="about-section">
+                <section class="about" id="about-section">
+                    <h1 class="about__title text-3xl weight-600">Sobre mí</h1>
+                    <div class="about__text">
+                        <p class="about__text__p">
+                            Diligente y ambicioso desarrollador web con amplia experiencia pero que aún no ha tenido su oportunidad de brillar.
+                        </p>
+                        <p class="about__text__p">
+                            Nací en Portugal en una familia española y desde que tuve mi primera consola me enamoré del mundo digital. Allá en el 2018 tuve contacto con la programación por primera vez, pero no fue hasta 2022 que de verdad me sumergí en este mundo.
+                        </p>
+                        <p class="about__text__p">
+                            Deseo afrontar retos que me supongan un esfuerzo ya que estos me generan satisfacción y hacen que ame aquello que hago. Además, mi capacidad de relacionarme con los demás hace que los trabajos en grupo sean amenos.
+                        </p>
+                    </div>
+                    <img src="images/about-image.png" alt="Portugal map" class="about__image">
+                </section>
+            </div>
         </main>
         <footer id="footer">
             <div class="footer__content">
                 <p class="footer__title" id="copyright">© Tekyo - Copyright activo</p>
                 <p class="footer__text">Sígueme en todas mis redes</p>
                 <div id="footer__media">
-                    <a href="https://www.instagram.com/tekyo_private/" class="footer__media__link insta" target="_blank">
+                    <a href="https://www.instagram.com/tekyo_private/" class="footer__media__link insta" target="_blank" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://youtube.com/tekyo23" class="footer__media__link youtube" target="_blank">
+                    <a href="https://youtube.com/tekyo23" class="footer__media__link youtube" target="_blank" aria-label="Twitter">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="https://github.com/Tekyo23" class="footer__media__link github" target="_blank">
+                    <a href="https://github.com/Tekyo23" class="footer__media__link github" target="_blank" aria-label="Github">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://twitter.com/tekyo23" class="footer__media__link twitter" target="_blank">
+                    <a href="https://twitter.com/tekyo23" class="footer__media__link twitter" target="_blank" aria-label="Youtube">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
                 </div>

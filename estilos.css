@@ -45,11 +45,9 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 body {
     margin: 0;
@@ -70,6 +68,17 @@ header {
 a {
     text-decoration: none;
 }
+
+section {
+    width: 80%;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* Header start */
 .nav {
     font-family: 'Nunito', sans-serif;
@@ -122,11 +131,9 @@ a {
     height: .2rem;
     position: absolute;
     left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
     top: 2.3rem;
     transition: width .35s;
-
 } 
 
 .register__btn:hover::before,
@@ -188,24 +195,15 @@ a {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    font-family: 'Montserrat', 'Hanken Grotesk', sans-serif;
 }
 
 .hero {
-    font-family: 'Montserrat', 'Hanken Grotesk', sans-serif;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: calc(100vh - 4.5rem);
-}
-
-.about {
-    border: 5px solid red;
 }
 
 .hero-column {
@@ -278,6 +276,7 @@ a {
 
 .hero__btn {
     transition: transform .3s ease-in-out;
+    will-change: transform;
 }
 
 .hero__btn:hover {
@@ -365,6 +364,13 @@ a {
     z-index: 10;
 }
 
+.about-section {
+    background: rgb(7, 65, 123);
+}
+
+.about__title {
+    text-transform: uppercase;
+}
 
 /* Home page end */
 
