@@ -29,7 +29,7 @@
                             <a href="register-login/register-login.html" class="nav__list__element__btn register__btn">Regístrate</a>
                         </li>
                             <li class="nav__list__element about-me">
-                                <a href="#about-section" class="nav__list__element__btn about-me__btn"><span>Sobre mí</span></a>
+                                <a href="#about-wrap" class="nav__list__element__btn about-me__btn"><span>Sobre mí</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -55,7 +55,7 @@
                         <h1 class="hero__title text-4xl weight-600">Desarrollador Front-end</h1>
                         <p class="hero__slogan text-m weight-100">&ltMás que sueños/&gt</p>
                         <div class="hero__contacts">
-                            <a href="#" class="hero__contact-me hero__btn text-s weight-600">Contáctame</a>
+                            <a href="#" class="hero__contact-me hero__btn btn text-s weight-600">Contáctame</a>
                             <a href="https://github.com/Tekyo23" class="hero__github hero__btn github" target="_blank" aria-label="Github">
                                 <i class="fa-brands fa-github"></i>
                             </a>
@@ -71,21 +71,26 @@
                     </div>
                 </section>
             </div>
-            <div class="about-section">
-                <section class="about" id="about-section">
-                    <h1 class="about__title text-3xl weight-600">Sobre mí</h1>
-                    <div class="about__text">
-                        <p class="about__text__p">
-                            Diligente y ambicioso desarrollador web con amplia experiencia pero que aún no ha tenido su oportunidad de brillar.
-                        </p>
-                        <p class="about__text__p">
-                            Nací en Portugal en una familia española y desde que tuve mi primera consola me enamoré del mundo digital. Allá en el 2018 tuve contacto con la programación por primera vez, pero no fue hasta 2022 que de verdad me sumergí en este mundo.
-                        </p>
-                        <p class="about__text__p">
-                            Deseo afrontar retos que me supongan un esfuerzo ya que estos me generan satisfacción y hacen que ame aquello que hago. Además, mi capacidad de relacionarme con los demás hace que los trabajos en grupo sean amenos.
-                        </p>
+            <div id="about-wrap">
+                <section class="about about-section">
+                    <div class="about-column about-column-left">
+                        <h1 class="about__title text-3xl weight-600">Sobre mí</h1>
+                        <div class="about__text">
+                            <p class="about__text__p">
+                                Diligente y ambicioso desarrollador web con amplia experiencia pero que aún no ha tenido su oportunidad de brillar.
+                            </p>
+                            <p class="about__text__p">
+                                Nací en Portugal en una familia española y desde que tuve mi primera consola me enamoré del mundo digital. Allá en el 2018 tuve contacto con la programación por primera vez, pero no fue hasta 2022 que de verdad me sumergí en este mundo.
+                            </p>
+                            <p class="about__text__p">
+                                Deseo afrontar retos que me supongan un esfuerzo ya que estos me generan satisfacción y hacen que ame aquello que hago. Además, mi capacidad de relacionarme con los demás hace que los trabajos en grupo sean amenos.
+                            </p>
+                        </div>
+                        <a href="#" class="about__cv about__btn btn text-s weight-600">Abrir CV</a>
                     </div>
-                    <img src="images/about-image.png" alt="Portugal map" class="about__image">
+                    <div class="about-column about-column-right">
+                        <img src="images/about-image.png" alt="Portugal map" class="about__image">
+                    </div>
                 </section>
             </div>
         </main>
