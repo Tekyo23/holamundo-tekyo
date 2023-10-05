@@ -430,6 +430,8 @@ section {
     display: flex;
     position: relative;
     transition: none;
+    outline: .25rem solid #7ed9fd;
+    outline-offset: -.25rem;
 }
 
 .about__cv:hover {
