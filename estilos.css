@@ -222,7 +222,7 @@ section {
     margin-inline: .3rem;
 }
 
-.hero {
+#hero {
     position: relative;
     display: flex;
     align-items: center;
@@ -390,7 +390,7 @@ section {
     z-index: 10;
 }
 
-.about-section {
+#about-section {
     display: flex;
     justify-content: space-between;
 }
