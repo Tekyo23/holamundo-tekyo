@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* Variables */
+
+.text-xxs {
+    font-size: .75rem;
+}
+
 .text-xs {
     font-size: 1rem;
 }
@@ -405,6 +410,7 @@ section {
     display: inline-block;
     margin-top: 0;
     margin-bottom: .5rem;
+    position: relative;
 }
 
 .about__title::before,
@@ -418,7 +424,7 @@ section {
 
 .about__title::after {
     top: 2.85rem;
-    left: 7.8rem;
+    left: calc(100% - 5rem);
 }
 
 .about__text  {
@@ -442,6 +448,102 @@ section {
 
 .about__image {
     height: 500px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__title {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+.projects__title::before,
+.projects__title::after {
+    content: '';
+    background: #009afa;
+    width: 5rem;
+    height: .2rem;
+    position: absolute;
+}
+
+.projects__title::after {
+    top: 2.85rem;
+    left: calc(100% - 5rem);
+}
+
+.projects__grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 500px));
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.project-card {
+    border: .2rem solid rgb(25, 25, 25);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background-color: rgba(41, 41, 41, 0.834);  
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    -webkit-box-shadow: 0px 15px 94px -37px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 15px 94px -37px rgba(0,0,0,1);
+    box-shadow: 0px 15px 94px -37px rgba(0,0,0,1);
+    transition: .2s ease-in-out;
+}
+
+
+.project-card__image-container {
+    height: 40%;
+}
+
+.project-card__data {
+    padding: .8rem;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-card__title {
+    position: relative;
+    margin-block: 0;
+    margin-left: .5rem;
+    top: -2rem;
+}
+
+.project-card__text {
+    margin-top: 0;
+}
+
+.project__github {
+    justify-self: end;
+}
+
+.project__github > .fa-brands {
+    margin-inline: 0;
+}
+.project-card__technologies{
+    font-size: 2.5rem;
+    fill: #2f56bf;
 }
 
 /* Home page end */
