@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 /* Variables */
 
 .text-xxs {
@@ -503,6 +502,10 @@ section {
     transition: .2s ease-in-out;
 }
 
+.project-card:hover {
+    border: .2rem solid rgb(184, 184, 184);
+    transition: .2s ease-in-out;
+}
 
 .project-card__image-container {
     height: 40%;
@@ -545,7 +548,6 @@ section {
     font-size: 2.5rem;
     fill: #2f56bf;
 }
-
 /* Home page end */
 
 /* Footer start */
